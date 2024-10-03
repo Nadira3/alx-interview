@@ -1,99 +1,117 @@
 # Pascal's Triangle Generator
 
-This project implements a recursive approach to generate Pascal's Triangle up to a specified number of rows.
+This project implements a recursive solution to generate Pascal’s Triangle up to a specified number of rows. The solution uses two recursive functions to build the triangle row by row and element by element.
 
-## Table of Contents
-- [Overview](#overview)
-- [Functions](#functions)
-  - [recurse_column](#recurse_column)
-  - [recurse_row](#recurse_row)
-  - [pascal_triangle](#pascal_triangle)
-- [Usage](#usage)
-- [Examples](#examples)
-- [How Pascal's Triangle Works](#how-pascals-triangle-works)
-- [Future Improvements](#future-improvements)
+## How It Works
 
-## Overview
-The task involves writing a Python program that generates Pascal's Triangle up to a specified number of levels (`n`). The triangle is built recursively, where each element is the sum of the two elements directly above it in the previous row. The edge elements of each row are always `1`.
+Pascal's Triangle is a triangular array of binomial coefficients. Each number in the triangle is the sum of the two numbers directly above it. The first and last numbers of each row are always `1`.
+
+This implementation leverages two recursive functions:
+1. **`recurse_column`**: This function manages adding rows to the triangle.
+2. **`recurse_row`**: This function builds each row by computing its elements based on the previous row.
+
+### Example of Pascal's Triangle for `n = 5`:
+
+```plaintext
+[
+    [1],
+    [1, 1],
+    [1, 2, 1],
+    [1, 3, 3, 1],
+    [1, 4, 6, 4, 1]
+]
+```
 
 ## Functions
 
-### `recurse_column(triangle, n)`
-This function recursively builds each row of Pascal's Triangle. It adds rows to the triangle one by one until the desired number of rows (`n`) is reached.
+recurse_column(triangle, start, stop)
 
-- **Parameters:**
-  - `triangle`: The list that holds the generated rows of Pascal's Triangle.
-  - `n`: The total number of rows to generate.
+### Purpose: 
 
-- **Returns:**
-  - The complete Pascal's Triangle (a list of lists).
+Recursively generates and appends rows to Pascal's Triangle.
 
-### `recurse_row(triangle, new_row, n, i)`
-This function generates a single row of Pascal's Triangle based on the last row in the triangle. It appends values to `new_row` until the row is complete.
+### Parameters:
 
-- **Parameters:**
-  - `triangle`: The list holding the current rows of Pascal's Triangle.
-  - `new_row`: The row currently being built.
-  - `n`: The current column index within the row being built.
-  - `i`: The index of the row being generated.
+triangle: The current state of the triangle (a list of lists).
 
-- **Returns:**
-  - The fully generated row.
+start: The current row index being processed.
 
-### `pascal_triangle(n)`
-This function initializes Pascal's Triangle generation by starting with the first row (`[1]`).
+stop: The total number of rows to generate.
 
-- **Parameters:**
-  - `n`: The total number of rows to generate.
 
-- **Returns:**
-  - The full Pascal's Triangle.
+### Returns: 
+
+The complete Pascal's Triangle.
+
+
+recurse_row(triangle, new_row, start, stop)
+
+### Purpose: 
+
+Recursively generates each row of Pascal’s Triangle by calculating its elements from the previous row.
+
+### Parameters:
+
+triangle: The current state of the triangle (list of lists).
+
+new_row: The row being constructed.
+
+start: The index of the element being processed.
+
+stop: The index of the row to generate.
+
+
+### Returns:
+
+A completed row for Pascal's Triangle.
+
+
+pascal_triangle(n)
+
+### Purpose:
+
+Initializes Pascal's Triangle and calls the recursive functions to generate the full triangle.
+
+### Parameters:
+
+n: The number of rows to generate.
+
+
+### Returns:
+
+Pascal's Triangle with n rows.
+
 
 ## Usage
-1. Clone the repository or download the script.
-2. Run the script using Python.
-3. Call the `pascal_triangle(n)` function with `n` being the number of rows you want to generate.
 
-```python
-n = 5
-triangle = pascal_triangle(n)
+To use the Pascal's Triangle generator, simply call the pascal_triangle(n) function with n as the number of rows you want to generate.
+
+Example:
+
+# Generate Pascal's Triangle with 5 rows
+triangle = pascal_triangle(5)
 print(triangle)
-```
 
-Example Output
+## File Structure
 
-For n = 5, the output will be:
-```
-[
-  [1],
-  [1, 1],
-  [1, 2, 1],
-  [1, 3, 3, 1],
-  [1, 4, 6, 4, 1]
-]
-```
-How Pascal's Triangle Works
+├── pascal_triangle.py   # Main file containing the functions
+├── README.md            # This README file
 
-Pascal's Triangle is a triangular array of binomial coefficients. Each number is the sum of the two numbers directly above it. The first and last elements of each row are always 1.
+Prerequisites
 
-For example:
-
-Row 0: [1]
-
-Row 1: [1, 1]
-
-Row 2: [1, 2, 1]
-
-Row 3: [1, 3, 3, 1]
-
-Row 4: [1, 4, 6, 4, 1]
+Python 3.x
 
 
-Future Improvements
+How to Run
 
-Error handling: Add input validation for non-integer or negative inputs.
+1. Clone the repository.
 
-Optimization: Refactor the recursion for larger values of n to improve efficiency.
 
-Visualization: Add a visual representation of Pascal's Triangle.
+2. Open the terminal in the project directory.
 
+
+3. Run the script:
+
+
+
+python3 pascal_triangle.py
