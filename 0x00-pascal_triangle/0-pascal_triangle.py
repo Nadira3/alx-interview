@@ -10,8 +10,7 @@ def recurse_column(triangle, i, n):
         return triangle
     if i == n - 1:
         return triangle
-    else:
-        triangle.append(recurse_row(triangle, [], 0, n))
+    triangle.append(recurse_row(triangle, [], 0, n))
     recurse_column(triangle, i + 1, n)
     return triangle
 
