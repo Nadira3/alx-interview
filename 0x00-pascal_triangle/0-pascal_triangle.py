@@ -1,18 +1,20 @@
 #!/usr/bin/python3
 
 """
-This module generates Pascal's Triangle up to a specified number of levels using recursion.
+This module generates Pascal's Triangle up to a specified
+number of levels using recursion.
 """
+
 
 def recurse_column(triangle, start, stop):
     """
     Recursively generates and appends rows to Pascal's Triangle.
-    
+
     Args:
         triangle (list): The current state of the triangle (list of lists).
         start (int): The current row index being processed.
         stop (int): The total number of rows to generate.
-    
+
     Returns:
         list: The complete Pascal's Triangle with 'stop' rows.
     """
@@ -27,14 +29,16 @@ def recurse_column(triangle, start, stop):
 
 def recurse_row(triangle, new_row, start, stop):
     """
-    Recursively generates a new row for Pascal's Triangle based on the previous row.
-    
+    Recursively generates a new row for Pascal's Triangle
+    based on the previous row.
+
     Args:
         triangle (list): The current state of the triangle.
         new_row (list): The row being constructed.
-        start (int): The index of the element being processed in the current row.
+        start (int): The index of the element being processed
+        in the current row.
         stop (int): The index of the row to generate.
-    
+
     Returns:
         list: A completed row for Pascal's Triangle.
     """
@@ -52,11 +56,12 @@ def recurse_row(triangle, new_row, start, stop):
 
 def pascal_triangle(n):
     """
-    Initializes the Pascal's Triangle and begins recursion to generate the full triangle.
-    
+    Initializes the Pascal's Triangle and begins recursion
+    to generate the full triangle.
+
     Args:
         n (int): The number of rows in Pascal's Triangle.
-    
+
     Returns:
         list: Pascal's Triangle with 'n' rows.
     """
