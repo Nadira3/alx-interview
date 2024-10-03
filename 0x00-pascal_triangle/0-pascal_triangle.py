@@ -1,3 +1,10 @@
+#!/usr/bin/python3
+
+"""
+fills a row with elements
+"""
+
+
 def recurse_column(triangle, n):
     if triangle.__len__() == n:
         return triangle
