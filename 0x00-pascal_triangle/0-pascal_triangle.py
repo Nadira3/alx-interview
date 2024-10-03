@@ -5,11 +5,14 @@ fills a row with elements
 """
 
 
-def recurse_column(triangle, n):
+def recurse_column(triangle, i, n):
     if triangle.__len__() == n:
         return triangle
-    for i in range(n - 1):
+    if i == n - 1:
+        return triangle
+    else:
         triangle.append(recurse_row(triangle, [], 0, n))
+    recurse_column(triangle, i + 1, n)
     return triangle
 
 
@@ -31,4 +34,4 @@ def pascal_triangle(n):
     if n < 1:
         triangle.append([])
         return triangle
-    return recurse_column([[1]], n)
+    return recurse_column([[1]], 0, n)
