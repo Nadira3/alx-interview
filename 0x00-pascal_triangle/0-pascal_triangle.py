@@ -62,6 +62,5 @@ def pascal_triangle(n):
     """
     triangle = []
     if n < 1:
-        triangle.append([])
         return triangle
     return recurse_column([[1]], 0, n)
