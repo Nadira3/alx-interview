@@ -18,9 +18,7 @@ def recurse_column(triangle, start, stop):
     Returns:
         list: The complete Pascal's Triangle with 'stop' rows.
     """
-    if triangle.__len__() == stop:
-        return triangle
-    if start == stop - 1:
+    if triangle.__len__() == stop or start == stop - 1:
         return triangle
     triangle.append(recurse_row(triangle, [], 0, stop))
     recurse_column(triangle, start + 1, stop)
@@ -43,9 +41,7 @@ def recurse_row(triangle, new_row, start, stop):
         list: A completed row for Pascal's Triangle.
     """
     old_row = triangle[triangle.__len__() - 1]
-    if start == 0:
-        new_row.append(1)
-    elif old_row.__len__() == new_row.__len__():
+    if start == 0 or old_row.__len__() == new_row.__len__():
         new_row.append(1)
     else:
         new_row.append(old_row[start - 1] + old_row[start])
