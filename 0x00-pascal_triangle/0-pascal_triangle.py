@@ -20,12 +20,12 @@ def recurse_column(triangle, start, stop):
     """
     if triangle.__len__() == stop or start == stop - 1:
         return triangle
-    triangle.append(recurse_row(triangle, [], 0, stop))
+    triangle.append(recurse_row(triangle, [], 0))
     recurse_column(triangle, start + 1, stop)
     return triangle
 
 
-def recurse_row(triangle, new_row, start, stop):
+def recurse_row(triangle, new_row, start):
     """
     Recursively generates a new row for Pascal's Triangle
     based on the previous row.
@@ -47,7 +47,7 @@ def recurse_row(triangle, new_row, start, stop):
         new_row.append(old_row[start - 1] + old_row[start])
     if triangle.__len__() == start:
         return new_row
-    return recurse_row(triangle, new_row, start + 1, stop)
+    return recurse_row(triangle, new_row, start + 1)
 
 
 def pascal_triangle(n):
