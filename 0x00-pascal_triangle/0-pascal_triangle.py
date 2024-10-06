@@ -35,7 +35,6 @@ def recurse_row(triangle, new_row, start):
         new_row (list): The row being constructed.
         start (int): The index of the element being processed
         in the current row.
-        stop (int): The index of the row to generate.
 
     Returns:
         list: A completed row for Pascal's Triangle.
