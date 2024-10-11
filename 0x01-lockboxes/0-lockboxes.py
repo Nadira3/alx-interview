@@ -16,7 +16,7 @@ def checkBoxes(boxes, idx, visited):
     Return:
         None
     """
-    if idx in visited or idx > len(boxes) - 1:
+    if idx in visited or idx < 0 or idx > len(boxes) - 1:
         return
     visited.add(idx)
     for key in boxes[idx]:
