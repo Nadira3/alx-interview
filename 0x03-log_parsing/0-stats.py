@@ -5,6 +5,7 @@
 
 import sys
 import re
+import traceback
 
 # Define the regex pattern
 substring_a = r'\[\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\.\d{6}\] '
@@ -48,3 +49,5 @@ try:
 
 except KeyboardInterrupt:
     print_stats()
+    traceback.print_exc()
+    sys.exit(0)
