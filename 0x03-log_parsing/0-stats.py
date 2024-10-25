@@ -5,7 +5,6 @@
 
 import sys
 import re
-import traceback
 
 # Define the regex pattern
 substring_a = r'\[\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\.\d{6}\] '
@@ -47,7 +46,5 @@ try:
         if line_count % 10 == 0:
             print_stats()
 
-except KeyboardInterrupt:
+except Exception as err:
     print_stats()
-    traceback.print_exc()
-    sys.exit(0)
