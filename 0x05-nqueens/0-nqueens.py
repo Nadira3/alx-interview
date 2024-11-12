@@ -26,11 +26,10 @@ def validate_input():
     return n
 
 
-def is_safe(board, row, col):
+def is_safe(bd, row, col):
     # Check if there’s a queen in the same column or diagonals
     for i in range(row):
-        if (board[i] == col or board[i] - i == col - row
-                or board[i] + i == col + row):
+        if (bd[i] == col or bd[i] - i == col - row or bd[i] + i == col + row):
             return False
     return True
 
