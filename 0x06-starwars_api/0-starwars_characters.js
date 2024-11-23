@@ -12,11 +12,11 @@ const movieId = process.argv[2];
 // Define the URL for the Star Wars API, using the movieId to get the film data
 const url = `https://swapi.dev/api/films/${movieId}/`;
 
-async function fetchCharacters() {
+async function fetchCharacters () {
   try {
     // Fetch the movie data
     const response = await requestPromise(url);
-    
+
     if (response.statusCode !== 200) {
       console.log('Failed to fetch data. Status code:', response.statusCode);
       return;
