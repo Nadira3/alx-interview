@@ -29,6 +29,7 @@ def makeChange(coins, total):
              Returns 0 if total is 0 or less.
              Returns -1 if the total cannot be met with the available coins.
     """
+```
 
 ## Example Usage
 ```
@@ -56,7 +57,7 @@ cd 0x08-making_change
 ```
 
 
-Learning Resources
+## Learning Resources
 
 **Python Official Documentation**: More Control Flow Tools[https://docs.python.org/3/tutorial/controlflow.html](https://docs.python.org/3/tutorial/controlflow.html)
 
