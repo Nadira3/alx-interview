@@ -63,14 +63,14 @@ cd 0x08-making_change
 
 ### GeeksforGeeks Articles:
 
-**Coin Change | DP-7**: [https://www.geeksforgeeks.org/coin-change-dp-7/](https://www.geeksforgeeks.org/coin-change-dp-7/)
+[Coin Change | DP-7](https://www.geeksforgeeks.org/coin-change-dp-7/)
 
-**Greedy Algorithm to Find Minimum Number of Coins**: [https://www.geeksforgeeks.org/greedy-algorithm-to-find-minimum-number-of-coins/](https://www.geeksforgeeks.org/greedy-algorithm-to-find-minimum-number-of-coins/)
+[Greedy Algorithm to Find Minimum Number of Coins](https://www.geeksforgeeks.org/greedy-algorithm-to-find-minimum-number-of-coins/)
 
 
 ## YouTube Tutorials:
 
-**Dynamic Programming - Coin Change Problem**: [(https://www.youtube.com)](https://www.youtube.com)
+**Dynamic Programming** - [Coin Change Problem](https://www.youtube.com)
 
 ## License
 
