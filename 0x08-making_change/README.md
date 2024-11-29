@@ -59,7 +59,7 @@ cd 0x08-making_change
 
 ## Learning Resources
 
-**Python Official Documentation**: More Control Flow Tools[https://docs.python.org/3/tutorial/controlflow.html](https://docs.python.org/3/tutorial/controlflow.html)
+**Python Official Documentation**: [More Control Flow Tools](https://docs.python.org/3/tutorial/controlflow.html)
 
 ### GeeksforGeeks Articles:
 
