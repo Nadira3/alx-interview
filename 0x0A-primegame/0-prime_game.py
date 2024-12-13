@@ -11,6 +11,7 @@ def is_prime(n):
             return False
     return True
 
+
 def sieve_of_eratosthenes(n):
     """Generate a list of primes up to n using the Sieve of Eratosthenes."""
     primes = [True] * (n + 1)
@@ -21,9 +22,11 @@ def sieve_of_eratosthenes(n):
                 primes[j] = False
     return primes
 
+
 def count_primes_up_to_n(n, primes):
     """Count the number of primes up to n."""
     return sum(primes[:n + 1])
+
 
 def isWinner(x, nums):
     """
