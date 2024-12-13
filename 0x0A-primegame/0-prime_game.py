@@ -39,7 +39,7 @@ def isWinner(x, nums):
     # Precompute primes up to the maximum number in nums
     max_n = max(nums)
     primes = sieve_of_eratosthenes(max_n)
-    
+
     # Determine the winner for each round
     maria_wins = 0
     ben_wins = 0
